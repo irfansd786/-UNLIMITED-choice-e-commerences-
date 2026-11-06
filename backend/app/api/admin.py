@@ -4,19 +4,19 @@ from sqlalchemy import func, desc
 from typing import List, Optional, Dict, Any
 from datetime import datetime, timedelta
 
-from backend.app.core.database import get_db
-from backend.app.core.deps import get_current_admin_user
-from backend.app.models.user import User, UserRole
-from backend.app.models.order import Order, OrderItem, OrderStatus
-from backend.app.models.product import Product
-from backend.app.models.payment import Payment, PaymentStatus
-from backend.app.models.review import Review
-from backend.app.schemas.order_payment_review_coupon import (
+from app.core.database import get_db
+from app.core.deps import get_current_admin_user
+from app.models.user import User, UserRole
+from app.models.order import Order, OrderItem, OrderStatus
+from app.models.product import Product
+from app.models.payment import Payment, PaymentStatus
+from app.models.review import Review
+from app.schemas.order_payment_review_coupon import (
     DashboardStatsResponse,
     OrderResponse,
     OrderStatusUpdate,
 )
-from backend.app.api.orders import build_order_response
+from app.api.orders import build_order_response
 
 router = APIRouter(prefix="/admin", tags=["Admin Operations"])
 

@@ -2,10 +2,10 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath("."))
 from fastapi.testclient import TestClient
-from backend.app.main import app
-from backend.app.core.database import SessionLocal
-from backend.app.models.product import Product
-from backend.app.models.category import Category
+from app.main import app
+from app.core.database import SessionLocal
+from app.models.product import Product
+from app.models.category import Category
 
 client = TestClient(app)
 

@@ -2,7 +2,7 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath("."))
 from fastapi.testclient import TestClient
-from backend.app.main import app
+from app.main import app
 
 client = TestClient(app)
 

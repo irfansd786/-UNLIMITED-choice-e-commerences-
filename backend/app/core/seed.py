@@ -1,17 +1,17 @@
 import datetime
 from sqlalchemy.orm import Session
-from backend.app.core.database import SessionLocal, Base, engine
-from backend.app.core.security import get_password_hash
-from backend.app.models.user import User, UserRole
-from backend.app.models.category import Category
-from backend.app.models.product import Product, ProductImage, ProductVariant
-from backend.app.models.cart import Cart
-from backend.app.models.wishlist import Wishlist
-from backend.app.models.address import Address
-from backend.app.models.coupon import Coupon, DiscountType
-from backend.app.models.review import Review
-from backend.app.models.order import Order, OrderItem, OrderStatus
-from backend.app.models.payment import Payment, PaymentStatus
+from app.core.database import SessionLocal, Base, engine
+from app.core.security import get_password_hash
+from app.models.user import User, UserRole
+from app.models.category import Category
+from app.models.product import Product, ProductImage, ProductVariant
+from app.models.cart import Cart
+from app.models.wishlist import Wishlist
+from app.models.address import Address
+from app.models.coupon import Coupon, DiscountType
+from app.models.review import Review
+from app.models.order import Order, OrderItem, OrderStatus
+from app.models.payment import Payment, PaymentStatus
 
 def seed_db():
     Base.metadata.create_all(bind=engine)

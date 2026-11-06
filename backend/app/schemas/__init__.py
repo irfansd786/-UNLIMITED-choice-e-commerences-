@@ -1,4 +1,4 @@
-from backend.app.schemas.auth import (
+from app.schemas.auth import (
     UserCreate,
     UserLogin,
     UserUpdate,
@@ -8,12 +8,12 @@ from backend.app.schemas.auth import (
     PasswordResetRequest,
     PasswordResetConfirm,
 )
-from backend.app.schemas.category import (
+from app.schemas.category import (
     CategoryCreate,
     CategoryUpdate,
     CategoryResponse,
 )
-from backend.app.schemas.product import (
+from app.schemas.product import (
     ProductImageCreate,
     ProductImageResponse,
     ProductVariantCreate,
@@ -23,7 +23,7 @@ from backend.app.schemas.product import (
     ProductResponse,
     ProductListResponse,
 )
-from backend.app.schemas.cart_wishlist_address import (
+from app.schemas.cart_wishlist_address import (
     CartItemCreate,
     CartItemUpdate,
     CartItemResponse,
@@ -34,7 +34,7 @@ from backend.app.schemas.cart_wishlist_address import (
     AddressUpdate,
     AddressResponse,
 )
-from backend.app.schemas.order_payment_review_coupon import (
+from app.schemas.order_payment_review_coupon import (
     OrderCreate,
     OrderStatusUpdate,
     OrderItemResponse,

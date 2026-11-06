@@ -8,6 +8,8 @@ BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__
 ROOT_DIR = os.path.dirname(BACKEND_DIR) # .../e-commerces
 CANONICAL_DB_PATH = os.path.join(BACKEND_DIR, "database", "varshi.db")
 STORAGE_DIR_PATH = os.path.join(BACKEND_DIR, "storage")
+os.makedirs(os.path.dirname(CANONICAL_DB_PATH), exist_ok=True)
+os.makedirs(STORAGE_DIR_PATH, exist_ok=True)
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "UNLIMITED choice API"

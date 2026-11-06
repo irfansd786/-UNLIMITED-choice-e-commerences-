@@ -3,10 +3,10 @@ from sqlalchemy.orm import Session
 from datetime import datetime
 from typing import List
 
-from backend.app.core.database import get_db
-from backend.app.core.deps import get_current_admin_user, get_current_user_optional
-from backend.app.models.coupon import Coupon, DiscountType
-from backend.app.schemas.order_payment_review_coupon import (
+from app.core.database import get_db
+from app.core.deps import get_current_admin_user, get_current_user_optional
+from app.models.coupon import Coupon, DiscountType
+from app.schemas.order_payment_review_coupon import (
     CouponValidateRequest,
     CouponValidateResponse,
     CouponCreate,

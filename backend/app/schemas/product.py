@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional, List, Dict, Any
 from pydantic import BaseModel, Field
-from backend.app.schemas.category import CategoryResponse
+from app.schemas.category import CategoryResponse
 
 class ProductImageBase(BaseModel):
     image_url: str

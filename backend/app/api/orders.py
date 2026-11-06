@@ -5,23 +5,23 @@ import uuid
 import random
 from typing import List, Optional
 
-from backend.app.core.database import get_db
-from backend.app.core.deps import get_current_user, get_current_admin_user
-from backend.app.models.user import User
-from backend.app.models.cart import Cart, CartItem
-from backend.app.models.product import Product
-from backend.app.models.address import Address
-from backend.app.models.order import Order, OrderItem, OrderStatus
-from backend.app.models.payment import Payment, PaymentStatus, PaymentMethod
-from backend.app.models.coupon import Coupon, DiscountType
-from backend.app.schemas.order_payment_review_coupon import (
+from app.core.database import get_db
+from app.core.deps import get_current_user, get_current_admin_user
+from app.models.user import User
+from app.models.cart import Cart, CartItem
+from app.models.product import Product
+from app.models.address import Address
+from app.models.order import Order, OrderItem, OrderStatus
+from app.models.payment import Payment, PaymentStatus, PaymentMethod
+from app.models.coupon import Coupon, DiscountType
+from app.schemas.order_payment_review_coupon import (
     OrderCreate,
     OrderResponse,
     OrderItemResponse,
     OrderStatusUpdate,
     PaymentResponse,
 )
-from backend.app.api.cart import FREE_SHIPPING_THRESHOLD, STANDARD_DELIVERY_FEE
+from app.api.cart import FREE_SHIPPING_THRESHOLD, STANDARD_DELIVERY_FEE
 
 router = APIRouter(prefix="/orders", tags=["Orders"])
 

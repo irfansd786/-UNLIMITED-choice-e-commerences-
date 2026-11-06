@@ -1,27 +1,35 @@
 import logging
+import os
+import sys
 from contextlib import asynccontextmanager
+
+# Ensure backend root directory is in sys.path
+_CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+_PARENT_DIR = os.path.dirname(_CURRENT_DIR)
+if _PARENT_DIR not in sys.path:
+    sys.path.insert(0, _PARENT_DIR)
+
 from fastapi import FastAPI, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
-import os
 
-from backend.app.core.config import settings, ROOT_DIR, BACKEND_DIR
-from backend.app.core.database import Base, engine
-from backend.app.core.seed import seed_db
+from app.core.config import settings, ROOT_DIR, BACKEND_DIR
+from app.core.database import Base, engine
+from app.core.seed import seed_db
 
 # Import all API routers
-from backend.app.api.auth import router as auth_router
-from backend.app.api.categories import router as categories_router
-from backend.app.api.products import router as products_router
-from backend.app.api.cart import router as cart_router
-from backend.app.api.wishlist import router as wishlist_router
-from backend.app.api.addresses import router as addresses_router
-from backend.app.api.orders import router as orders_router
-from backend.app.api.reviews import router as reviews_router
-from backend.app.api.coupons import router as coupons_router
-from backend.app.api.admin import router as admin_router
-from backend.app.api.ai_assistant import router as ai_assistant_router
+from app.api.auth import router as auth_router
+from app.api.categories import router as categories_router
+from app.api.products import router as products_router
+from app.api.cart import router as cart_router
+from app.api.wishlist import router as wishlist_router
+from app.api.addresses import router as addresses_router
+from app.api.orders import router as orders_router
+from app.api.reviews import router as reviews_router
+from app.api.coupons import router as coupons_router
+from app.api.admin import router as admin_router
+from app.api.ai_assistant import router as ai_assistant_router
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("varshi_enterprises")
@@ -99,4 +107,4 @@ async def global_exception_handler(request: Request, exc: Exception):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("backend.app.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)

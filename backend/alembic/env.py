@@ -6,9 +6,9 @@ from logging.config import fileConfig
 from sqlalchemy import engine_from_config, pool
 from alembic import context
 
-from backend.app.core.config import settings
-from backend.app.core.database import Base
-import backend.app.models
+from app.core.config import settings
+from app.core.database import Base
+import app.models
 
 config = context.config
 if config.config_file_name is not None:

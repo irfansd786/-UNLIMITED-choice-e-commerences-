@@ -4,9 +4,9 @@ from sqlalchemy.orm import Session
 from typing import Optional
 from jose import JWTError, jwt
 
-from backend.app.core.config import settings
-from backend.app.core.database import get_db
-from backend.app.models.user import User, UserRole
+from app.core.config import settings
+from app.core.database import get_db
+from app.models.user import User, UserRole
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.API_V1_STR}/auth/login", auto_error=False)
 

@@ -1,14 +1,14 @@
-from backend.app.models.user import User, UserRole
-from backend.app.models.category import Category
-from backend.app.models.product import Product, ProductImage, ProductVariant
-from backend.app.models.cart import Cart, CartItem
-from backend.app.models.wishlist import Wishlist, WishlistItem
-from backend.app.models.address import Address
-from backend.app.models.order import Order, OrderItem, OrderStatus
-from backend.app.models.payment import Payment, PaymentMethod, PaymentStatus
-from backend.app.models.review import Review
-from backend.app.models.coupon import Coupon, DiscountType
-from backend.app.models.ai_conversation import AIConversation, AIMessage
+from app.models.user import User, UserRole
+from app.models.category import Category
+from app.models.product import Product, ProductImage, ProductVariant
+from app.models.cart import Cart, CartItem
+from app.models.wishlist import Wishlist, WishlistItem
+from app.models.address import Address
+from app.models.order import Order, OrderItem, OrderStatus
+from app.models.payment import Payment, PaymentMethod, PaymentStatus
+from app.models.review import Review
+from app.models.coupon import Coupon, DiscountType
+from app.models.ai_conversation import AIConversation, AIMessage
 
 __all__ = [
     "User",

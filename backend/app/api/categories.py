@@ -3,11 +3,11 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 from typing import List, Optional
 
-from backend.app.core.database import get_db
-from backend.app.core.deps import get_current_admin_user
-from backend.app.models.category import Category
-from backend.app.models.product import Product
-from backend.app.schemas.category import (
+from app.core.database import get_db
+from app.core.deps import get_current_admin_user
+from app.models.category import Category
+from app.models.product import Product
+from app.schemas.category import (
     CategoryCreate,
     CategoryUpdate,
     CategoryResponse,

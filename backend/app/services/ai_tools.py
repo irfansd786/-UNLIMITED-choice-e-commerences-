@@ -4,13 +4,13 @@ from datetime import datetime
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import func, desc
 
-from backend.app.models.order import Order, OrderItem, OrderStatus
-from backend.app.models.product import Product, ProductImage, ProductVariant
-from backend.app.models.category import Category
-from backend.app.models.payment import Payment, PaymentStatus
-from backend.app.models.review import Review
-from backend.app.models.user import User
-from backend.app.services.business_intelligence import get_business_kpis
+from app.models.order import Order, OrderItem, OrderStatus
+from app.models.product import Product, ProductImage, ProductVariant
+from app.models.category import Category
+from app.models.payment import Payment, PaymentStatus
+from app.models.review import Review
+from app.models.user import User
+from app.services.business_intelligence import get_business_kpis
 
 # Tool declarations matching OpenAI / Groq function-calling specification
 GROQ_TOOL_DEFINITIONS = [

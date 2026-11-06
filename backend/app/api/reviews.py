@@ -2,13 +2,13 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from typing import List, Optional
 
-from backend.app.core.database import get_db
-from backend.app.core.deps import get_current_user, get_current_admin_user
-from backend.app.models.user import User
-from backend.app.models.product import Product
-from backend.app.models.review import Review
-from backend.app.models.order import Order, OrderItem, OrderStatus
-from backend.app.schemas.order_payment_review_coupon import (
+from app.core.database import get_db
+from app.core.deps import get_current_user, get_current_admin_user
+from app.models.user import User
+from app.models.product import Product
+from app.models.review import Review
+from app.models.order import Order, OrderItem, OrderStatus
+from app.schemas.order_payment_review_coupon import (
     ReviewCreate,
     ReviewResponse,
 )

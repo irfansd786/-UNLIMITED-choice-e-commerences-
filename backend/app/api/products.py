@@ -4,12 +4,12 @@ from sqlalchemy import or_, func, desc, asc
 from typing import List, Optional
 from datetime import datetime
 
-from backend.app.core.database import get_db
-from backend.app.core.deps import get_current_admin_user, get_current_user_optional
-from backend.app.models.product import Product, ProductImage, ProductVariant
-from backend.app.models.category import Category
-from backend.app.models.review import Review
-from backend.app.schemas.product import (
+from app.core.database import get_db
+from app.core.deps import get_current_admin_user, get_current_user_optional
+from app.models.product import Product, ProductImage, ProductVariant
+from app.models.category import Category
+from app.models.review import Review
+from app.schemas.product import (
     ProductCreate,
     ProductUpdate,
     ProductResponse,
@@ -358,7 +358,7 @@ def delete_product(
         raise HTTPException(status_code=404, detail="Product not found")
         
     # Check if product is in any orders before physical delete to preserve audit history
-    from backend.app.models.order import OrderItem
+    from app.models.order import OrderItem
     has_orders = db.query(OrderItem).filter(OrderItem.product_id == product.id).first() is not None
     if has_orders:
         product.status = "ARCHIVED"

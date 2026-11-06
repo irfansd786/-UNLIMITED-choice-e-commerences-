@@ -2,14 +2,14 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from datetime import timedelta
 
-from backend.app.core.database import get_db
-from backend.app.core.security import verify_password, get_password_hash, create_access_token
-from backend.app.core.config import settings
-from backend.app.core.deps import get_current_user
-from backend.app.models.user import User, UserRole
-from backend.app.models.cart import Cart
-from backend.app.models.wishlist import Wishlist
-from backend.app.schemas.auth import (
+from app.core.database import get_db
+from app.core.security import verify_password, get_password_hash, create_access_token
+from app.core.config import settings
+from app.core.deps import get_current_user
+from app.models.user import User, UserRole
+from app.models.cart import Cart
+from app.models.wishlist import Wishlist
+from app.schemas.auth import (
     UserCreate,
     UserLogin,
     UserResponse,

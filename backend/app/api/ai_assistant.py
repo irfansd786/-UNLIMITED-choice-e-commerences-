@@ -6,14 +6,14 @@ from fastapi.responses import Response
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
-from backend.app.core.database import get_db
-from backend.app.core.deps import get_current_admin_user
-from backend.app.models.user import User
-from backend.app.models.ai_conversation import AIConversation, AIMessage
-from backend.app.services.business_intelligence import get_business_kpis
-from backend.app.services.groq_service import run_groq_conversation, generate_daily_briefing_summary
-from backend.app.services.elevenlabs_service import synthesize_speech, transcribe_audio_stream, fetch_available_voices
-from backend.app.services.ai_tools import execute_confirmed_action
+from app.core.database import get_db
+from app.core.deps import get_current_admin_user
+from app.models.user import User
+from app.models.ai_conversation import AIConversation, AIMessage
+from app.services.business_intelligence import get_business_kpis
+from app.services.groq_service import run_groq_conversation, generate_daily_briefing_summary
+from app.services.elevenlabs_service import synthesize_speech, transcribe_audio_stream, fetch_available_voices
+from app.services.ai_tools import execute_confirmed_action
 
 logger = logging.getLogger("varshi_ai_router")
 

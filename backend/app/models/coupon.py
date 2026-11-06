@@ -1,7 +1,7 @@
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, Float
 import enum
-from backend.app.core.database import Base
+from app.core.database import Base
 
 class DiscountType(str, enum.Enum):
     PERCENTAGE = "PERCENTAGE"

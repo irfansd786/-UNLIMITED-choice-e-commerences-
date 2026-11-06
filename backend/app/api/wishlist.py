@@ -2,16 +2,16 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session, joinedload
 from typing import List
 
-from backend.app.core.database import get_db
-from backend.app.core.deps import get_current_user
-from backend.app.models.user import User
-from backend.app.models.wishlist import Wishlist, WishlistItem
-from backend.app.models.product import Product
-from backend.app.schemas.cart_wishlist_address import (
+from app.core.database import get_db
+from app.core.deps import get_current_user
+from app.models.user import User
+from app.models.wishlist import Wishlist, WishlistItem
+from app.models.product import Product
+from app.schemas.cart_wishlist_address import (
     WishlistResponse,
     WishlistItemResponse,
 )
-from backend.app.api.products import format_product_response
+from app.api.products import format_product_response
 
 router = APIRouter(prefix="/wishlist", tags=["Wishlist"])
 

@@ -4,12 +4,12 @@ from typing import Dict, Any, List, Optional
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import func, desc, and_, or_
 
-from backend.app.models.order import Order, OrderItem, OrderStatus
-from backend.app.models.product import Product, ProductImage, ProductVariant
-from backend.app.models.payment import Payment, PaymentStatus, PaymentMethod
-from backend.app.models.review import Review
-from backend.app.models.category import Category
-from backend.app.models.user import User, UserRole
+from app.models.order import Order, OrderItem, OrderStatus
+from app.models.product import Product, ProductImage, ProductVariant
+from app.models.payment import Payment, PaymentStatus, PaymentMethod
+from app.models.review import Review
+from app.models.category import Category
+from app.models.user import User, UserRole
 
 def get_store_time(offset_minutes: int = 330) -> datetime:
     """Returns the current local store time based on minute offset (default: +330 for IST)."""

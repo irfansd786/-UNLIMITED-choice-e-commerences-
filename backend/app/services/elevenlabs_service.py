@@ -4,7 +4,7 @@ from typing import Optional, Dict, Any, List
 import httpx
 import groq
 
-from backend.app.core.config import settings
+from app.core.config import settings
 
 logger = logging.getLogger("varshi_elevenlabs")
 

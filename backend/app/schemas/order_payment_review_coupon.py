@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import List, Optional, Dict, Any
 from pydantic import BaseModel
-from backend.app.schemas.product import ProductResponse
+from app.schemas.product import ProductResponse
 
 # ORDERS
 class OrderItemResponse(BaseModel):

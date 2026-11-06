@@ -2,7 +2,7 @@ from datetime import datetime
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Float, JSON
 from sqlalchemy.orm import relationship
 import enum
-from backend.app.core.database import Base
+from app.core.database import Base
 
 class PaymentMethod(str, enum.Enum):
     UPI = "UPI"

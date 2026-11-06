@@ -3,8 +3,8 @@ import logging
 from typing import List, Dict, Any, Optional, Tuple
 import groq
 
-from backend.app.core.config import settings
-from backend.app.services.ai_tools import GROQ_TOOL_DEFINITIONS, execute_tool
+from app.core.config import settings
+from app.services.ai_tools import GROQ_TOOL_DEFINITIONS, execute_tool
 
 logger = logging.getLogger("varshi_groq")
 

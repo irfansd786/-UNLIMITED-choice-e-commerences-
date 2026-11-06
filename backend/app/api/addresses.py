@@ -2,11 +2,11 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from typing import List
 
-from backend.app.core.database import get_db
-from backend.app.core.deps import get_current_user
-from backend.app.models.user import User
-from backend.app.models.address import Address
-from backend.app.schemas.cart_wishlist_address import (
+from app.core.database import get_db
+from app.core.deps import get_current_user
+from app.models.user import User
+from app.models.address import Address
+from app.schemas.cart_wishlist_address import (
     AddressCreate,
     AddressUpdate,
     AddressResponse,
