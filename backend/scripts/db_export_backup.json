@@ -1,0 +1,607 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@varshienterprises.com",
+      "hashed_password": "$2b$12$9eykDrwaPGjyjqe4EPWaHu1qQd8FikvFTdVhdKefg.fsVHdDjv.zi",
+      "full_name": "Varshi Admin",
+      "phone": "+91 98765 43210",
+      "role": "ADMIN",
+      "is_active": 1,
+      "created_at": "2026-10-01 17:59:23.501943",
+      "updated_at": "2026-10-01 17:59:23.501946"
+    },
+    {
+      "id": 2,
+      "email": "customer@varshienterprises.com",
+      "hashed_password": "$2b$12$.G5JzyZ1vtIJzi0WfOPPsuc/53Txe/TDSSmGdS2z1jVCEd1L2ajV6",
+      "full_name": "Priya Sharma",
+      "phone": "+91 98234 56789",
+      "role": "CUSTOMER",
+      "is_active": 1,
+      "created_at": "2026-10-01 17:59:23.695873",
+      "updated_at": "2026-10-01 17:59:23.695876"
+    },
+    {
+      "id": 3,
+      "email": "mrfool7860@gmail.com",
+      "hashed_password": "$2b$12$GryweQptyPWscbiZgLn4CuInMWw5/Av5OQPVarPy9c..y/YiT9Wv.",
+      "full_name": "irfan",
+      "phone": null,
+      "role": "CUSTOMER",
+      "is_active": 1,
+      "created_at": "2026-10-01 18:23:46.352493",
+      "updated_at": "2026-10-01 18:23:46.352500"
+    }
+  ],
+  "categories": [
+    {
+      "id": 7,
+      "name": "Men's Kurtas & Sets",
+      "slug": "mens-kurtas-sets",
+      "description": "Royal Lucknowi chikankari, Banarasi silk, and pure cotton kurta sets for men.",
+      "image_url": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+      "is_featured": 1,
+      "display_order": 7,
+      "parent_id": null,
+      "created_at": "2026-10-13 14:05:46.067864",
+      "updated_at": "2026-10-13 14:05:46.067867"
+    },
+    {
+      "id": 8,
+      "name": "Men's Jackets & Sherwanis",
+      "slug": "mens-jackets-sherwanis",
+      "description": "Brocade bandhgala Nehru jackets, royal raw silk sherwanis, and festive jodhpuri coats.",
+      "image_url": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80",
+      "is_featured": 1,
+      "display_order": 8,
+      "parent_id": null,
+      "created_at": "2026-10-13 14:05:46.074241",
+      "updated_at": "2026-10-13 14:05:46.074243"
+    }
+  ],
+  "coupons": [
+    {
+      "id": 1,
+      "code": "WELCOME10",
+      "description": "10% off on your first order above ₹999",
+      "discount_type": "PERCENTAGE",
+      "discount_value": 10,
+      "min_order_value": 999,
+      "max_discount_amount": 500,
+      "usage_limit": 1000,
+      "times_used": 0,
+      "is_active": 1,
+      "valid_from": "2026-10-01 17:59:23.904423",
+      "valid_until": null,
+      "created_at": "2026-10-01 17:59:23.904426",
+      "updated_at": "2026-10-01 17:59:23.904427"
+    },
+    {
+      "id": 2,
+      "code": "FESTIVE500",
+      "description": "Flat ₹500 discount on orders above ₹2,999",
+      "discount_type": "FIXED",
+      "discount_value": 500,
+      "min_order_value": 2999,
+      "max_discount_amount": 500,
+      "usage_limit": 500,
+      "times_used": 0,
+      "is_active": 1,
+      "valid_from": "2026-10-01 17:59:23.904429",
+      "valid_until": null,
+      "created_at": "2026-10-01 17:59:23.904430",
+      "updated_at": "2026-10-01 17:59:23.904431"
+    },
+    {
+      "id": 3,
+      "code": "HERITAGE20",
+      "description": "20% off on premium silk and jewellery orders above ₹3,999",
+      "discount_type": "PERCENTAGE",
+      "discount_value": 20,
+      "min_order_value": 3999,
+      "max_discount_amount": 1000,
+      "usage_limit": 200,
+      "times_used": 0,
+      "is_active": 1,
+      "valid_from": "2026-10-01 17:59:23.904432",
+      "valid_until": null,
+      "created_at": "2026-10-01 17:59:23.904433",
+      "updated_at": "2026-10-01 17:59:23.904434"
+    }
+  ],
+  "products": [
+    {
+      "id": 16,
+      "name": "Royal Lucknowi Chikan Embroidered Men's Kurta Set",
+      "slug": "royal-lucknowi-chikan-embroidered-mens-kurta-set",
+      "short_description": "Handcrafted pure cotton kurta with intricate shadow chikankari work and churidar.",
+      "description": "Experience understated royal elegance with this authentic Lucknowi Chikan kurta set. Hand-embroidered by Awadh master artisans on lightweight breathable cotton, paired with matching churidar.",
+      "category_id": 7,
+      "price": 2499,
+      "compare_at_price": 3999,
+      "cost_price": 1200,
+      "sku": "VE-MEN-KUR-016",
+      "stock": 16,
+      "reserved_stock": 0,
+      "low_stock_threshold": 4,
+      "status": "PUBLISHED",
+      "brand": "Varshi Men",
+      "material": "100% Breathable Fine Cotton",
+      "specifications": "{\"Fabric\": \"Pure Cotton\", \"Set\": \"Kurta & Churidar\", \"Care\": \"Hand Wash\"}",
+      "is_featured": 1,
+      "is_new_arrival": 1,
+      "is_deal_of_the_day": 1,
+      "stock_last_verified_at": "2026-10-13 14:05:46.081905",
+      "has_real_photography": 1,
+      "created_at": "2026-10-13 14:05:46.082738",
+      "updated_at": "2026-10-13 14:05:46.082740"
+    },
+    {
+      "id": 17,
+      "name": "Pure Tussar Silk Handwoven Men's Festive Kurta",
+      "slug": "pure-tussar-silk-handwoven-mens-festive-kurta",
+      "short_description": "Gold-toned textured raw tussar silk kurta with mandarin collar.",
+      "description": "Richly textured pure tussar wild silk handloomed for festive celebrations, weddings, and traditional gatherings. Accented with brass buttons and concealed placket.",
+      "category_id": 7,
+      "price": 2899,
+      "compare_at_price": 4499,
+      "cost_price": 1400,
+      "sku": "VE-MEN-KUR-017",
+      "stock": 12,
+      "reserved_stock": 0,
+      "low_stock_threshold": 3,
+      "status": "PUBLISHED",
+      "brand": "Varshi Men",
+      "material": "Pure Handwoven Tussar Silk",
+      "specifications": "{\"Fabric\": \"Tussar Silk\", \"Fit\": \"Comfort Fit\", \"Care\": \"Dry Clean\"}",
+      "is_featured": 1,
+      "is_new_arrival": 1,
+      "is_deal_of_the_day": 0,
+      "stock_last_verified_at": "2026-10-13 14:05:46.091116",
+      "has_real_photography": 1,
+      "created_at": "2026-10-13 14:05:46.091421",
+      "updated_at": "2026-10-13 14:05:46.091422"
+    },
+    {
+      "id": 18,
+      "name": "Royal Brocade Banarasi Silk Men's Nehru Jacket",
+      "slug": "royal-brocade-banarasi-silk-mens-nehru-jacket",
+      "short_description": "Antique gold zari woven sleeveless bandhgala jacket with metal buttons.",
+      "description": "Woven on jacquard looms in Varanasi, this antique gold Banarasi brocade Nehru jacket pairs effortlessly over kurtas and shirts for festive and wedding wear.",
+      "category_id": 8,
+      "price": 1999,
+      "compare_at_price": 3299,
+      "cost_price": 950,
+      "sku": "VE-MEN-JAC-018",
+      "stock": 20,
+      "reserved_stock": 0,
+      "low_stock_threshold": 5,
+      "status": "PUBLISHED",
+      "brand": "Varshi Men",
+      "material": "Banarasi Brocade Silk",
+      "specifications": "{\"Pattern\": \"Brocade Jaal\", \"Style\": \"Nehru Collar Bandhgala\", \"Care\": \"Dry Clean\"}",
+      "is_featured": 1,
+      "is_new_arrival": 1,
+      "is_deal_of_the_day": 1,
+      "stock_last_verified_at": "2026-10-13 14:05:46.100079",
+      "has_real_photography": 1,
+      "created_at": "2026-10-13 14:05:46.100371",
+      "updated_at": "2026-10-13 14:05:46.100373"
+    },
+    {
+      "id": 19,
+      "name": "Embroidered Raw Silk Jodhpuri Bandhgala Coat",
+      "slug": "embroidered-raw-silk-jodhpuri-bandhgala-coat",
+      "short_description": "Midnight blue raw silk tailored formal sherwani coat with antique crest buttons.",
+      "description": "Structured tailored royal Jodhpuri coat crafted from high-gsm raw silk. Hand-finished collar embroidery and embossed royal crest metal buttons.",
+      "category_id": 8,
+      "price": 3499,
+      "compare_at_price": 5999,
+      "cost_price": 1800,
+      "sku": "VE-MEN-JAC-019",
+      "stock": 10,
+      "reserved_stock": 0,
+      "low_stock_threshold": 3,
+      "status": "PUBLISHED",
+      "brand": "Varshi Men",
+      "material": "Premium Raw Silk",
+      "specifications": "{\"Fabric\": \"Raw Silk\", \"Cut\": \"Jodhpuri Tailored\", \"Care\": \"Dry Clean Only\"}",
+      "is_featured": 1,
+      "is_new_arrival": 0,
+      "is_deal_of_the_day": 0,
+      "stock_last_verified_at": "2026-10-13 14:05:46.108647",
+      "has_real_photography": 1,
+      "created_at": "2026-10-13 14:05:46.108915",
+      "updated_at": "2026-10-13 14:05:46.108917"
+    }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "created_at": "2026-10-01 17:59:23.696531",
+      "updated_at": "2026-10-01 17:59:23.696533"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "created_at": "2026-10-01 17:59:23.698523",
+      "updated_at": "2026-10-01 17:59:23.698524"
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "created_at": "2026-10-01 18:23:46.368826",
+      "updated_at": "2026-10-01 18:23:46.368832"
+    }
+  ],
+  "wishlists": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "created_at": "2026-10-01 17:59:23.697116"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "created_at": "2026-10-01 17:59:23.698610"
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "created_at": "2026-10-01 18:23:46.371750"
+    }
+  ],
+  "addresses": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "full_name": "Priya Sharma",
+      "phone": "+91 98234 56789",
+      "address_line1": "Flat 402, Royal Palms Residency",
+      "address_line2": "Near Cyber City, MG Road",
+      "landmark": "Opposite Grand Plaza",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "postal_code": "560001",
+      "address_type": "HOME",
+      "is_default": 1,
+      "created_at": "2026-10-01 17:59:23.698283",
+      "updated_at": "2026-10-01 17:59:23.698285"
+    },
+    {
+      "id": 2,
+      "user_id": 3,
+      "full_name": "sd Irfan",
+      "phone": "+919346853657",
+      "address_line1": "12345",
+      "address_line2": "",
+      "landmark": "",
+      "city": "hyd",
+      "state": "hyd",
+      "postal_code": "560001",
+      "address_type": "HOME",
+      "is_default": 1,
+      "created_at": "2026-10-01 18:24:30.584952",
+      "updated_at": "2026-10-01 18:24:30.584958"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "order_number": "VE-20261001-9E1446",
+      "user_id": 3,
+      "status": "CONFIRMED",
+      "subtotal": 5499,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total_amount": 5499,
+      "coupon_code": null,
+      "shipping_address": "{\"full_name\": \"sd Irfan\", \"phone\": \"+919346853657\", \"address_line1\": \"12345\", \"address_line2\": \"\", \"landmark\": \"\", \"city\": \"hyd\", \"state\": \"hyd\", \"postal_code\": \"560001\", \"address_type\": \"HOME\"}",
+      "customer_notes": null,
+      "admin_notes": null,
+      "status_history": "[{\"status\": \"PLACED\", \"timestamp\": \"2026-10-01T18:24:44.148463\", \"note\": \"Order placed successfully by customer.\"}, {\"status\": \"CONFIRMED\", \"timestamp\": \"2026-10-01T18:24:44.148463\", \"note\": \"Payment verified via Mock Gateway. Order confirmed.\"}]",
+      "created_at": "2026-10-01 18:24:44.148463",
+      "updated_at": "2026-10-01 18:24:44.148463"
+    }
+  ],
+  "product_images": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "image_url": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Royal Emerald Kanjeevaram Pure Silk Saree - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-01 17:59:23.786401"
+    },
+    {
+      "id": 2,
+      "product_id": 1,
+      "image_url": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Royal Emerald Kanjeevaram Pure Silk Saree - View 2",
+      "display_order": 1,
+      "is_primary": 0,
+      "created_at": "2026-10-01 17:59:23.786405"
+    },
+    {
+      "id": 3,
+      "product_id": 1,
+      "image_url": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Royal Emerald Kanjeevaram Pure Silk Saree - View 3",
+      "display_order": 2,
+      "is_primary": 0,
+      "created_at": "2026-10-01 17:59:23.786407"
+    },
+    {
+      "id": 4,
+      "product_id": 2,
+      "image_url": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Crimson Red Banarasi Katun Brocade Saree - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-01 17:59:23.803973"
+    },
+    {
+      "id": 5,
+      "product_id": 2,
+      "image_url": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Crimson Red Banarasi Katun Brocade Saree - View 2",
+      "display_order": 1,
+      "is_primary": 0,
+      "created_at": "2026-10-01 17:59:23.803980"
+    },
+    {
+      "id": 6,
+      "product_id": 3,
+      "image_url": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Hand-Embroidered Chanderi Kurta Set with Organza Dupatta - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-01 17:59:23.818665"
+    },
+    {
+      "id": 7,
+      "product_id": 3,
+      "image_url": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Hand-Embroidered Chanderi Kurta Set with Organza Dupatta - View 2",
+      "display_order": 1,
+      "is_primary": 0,
+      "created_at": "2026-10-01 17:59:23.818671"
+    },
+    {
+      "id": 8,
+      "product_id": 4,
+      "image_url": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Artisanal Block-Printed Anarkali Suit Set - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-01 17:59:23.835304"
+    },
+    {
+      "id": 9,
+      "product_id": 5,
+      "image_url": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Heritage Kundan & Pearl Bridal Choker Set - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-01 17:59:23.852197"
+    },
+    {
+      "id": 10,
+      "product_id": 5,
+      "image_url": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Heritage Kundan & Pearl Bridal Choker Set - View 2",
+      "display_order": 1,
+      "is_primary": 0,
+      "created_at": "2026-10-01 17:59:23.852202"
+    },
+    {
+      "id": 11,
+      "product_id": 6,
+      "image_url": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Traditional Temple Nakshi Jhumka Earrings - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-01 17:59:23.865076"
+    },
+    {
+      "id": 12,
+      "product_id": 7,
+      "image_url": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Midnight Velvet Embroidered Semi-Stitched Lehenga - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-01 17:59:23.875428"
+    },
+    {
+      "id": 13,
+      "product_id": 8,
+      "image_url": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Hand-Carved Solid Brass Peacock Diya Urli - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-01 17:59:23.885260"
+    },
+    {
+      "id": 14,
+      "product_id": 9,
+      "image_url": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Pure Silver Plated Royal Pooja & Celebration Thali Set - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-01 17:59:23.896508"
+    },
+    {
+      "id": 15,
+      "product_id": 10,
+      "image_url": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Royal Zari Woven Organza Silk Festive Saree - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-13 13:30:09.849438"
+    },
+    {
+      "id": 16,
+      "product_id": 11,
+      "image_url": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Meenakari Peacock Kundan Chandelier Jhumka - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-13 13:30:09.857456"
+    },
+    {
+      "id": 17,
+      "product_id": 12,
+      "image_url": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Gota Patti Embroidered Chiffon Anarkali Kurta - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-13 13:30:09.867100"
+    },
+    {
+      "id": 18,
+      "product_id": 13,
+      "image_url": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Peacock Embossed Pure Brass Diya Stand - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-13 13:30:09.874188"
+    },
+    {
+      "id": 19,
+      "product_id": 14,
+      "image_url": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Maroon & Antique Gold Zari Bridal Lehenga Set - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-13 13:30:09.883103"
+    },
+    {
+      "id": 20,
+      "product_id": 15,
+      "image_url": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Silver-Plated Sacred Nandi Pooja Bell & Diya Gift Set - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-13 13:30:09.890413"
+    },
+    {
+      "id": 21,
+      "product_id": 16,
+      "image_url": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Royal Lucknowi Chikan Embroidered Men's Kurta Set - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-13 14:05:46.087820"
+    },
+    {
+      "id": 22,
+      "product_id": 17,
+      "image_url": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Pure Tussar Silk Handwoven Men's Festive Kurta - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-13 14:05:46.096078"
+    },
+    {
+      "id": 23,
+      "product_id": 18,
+      "image_url": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Royal Brocade Banarasi Silk Men's Nehru Jacket - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-13 14:05:46.105078"
+    },
+    {
+      "id": 24,
+      "product_id": 19,
+      "image_url": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=80",
+      "alt_text": "Embroidered Raw Silk Jodhpuri Bandhgala Coat - View 1",
+      "display_order": 0,
+      "is_primary": 1,
+      "created_at": "2026-10-13 14:05:46.114127"
+    }
+  ],
+  "product_variants": [],
+  "cart_items": [
+    {
+      "id": 1,
+      "cart_id": 3,
+      "product_id": 17,
+      "quantity": 9,
+      "created_at": "2026-10-13 14:29:39.455624",
+      "updated_at": "2026-10-13 14:33:27.425962"
+    },
+    {
+      "id": 2,
+      "cart_id": 3,
+      "product_id": 11,
+      "quantity": 3,
+      "created_at": "2026-10-13 14:33:40.907376",
+      "updated_at": "2026-10-13 14:34:01.088025"
+    },
+    {
+      "id": 3,
+      "cart_id": 3,
+      "product_id": 6,
+      "quantity": 2,
+      "created_at": "2026-10-13 14:33:46.326592",
+      "updated_at": "2026-10-13 14:33:51.074002"
+    },
+    {
+      "id": 4,
+      "cart_id": 3,
+      "product_id": 5,
+      "quantity": 1,
+      "created_at": "2026-10-13 14:33:48.189635",
+      "updated_at": "2026-10-13 14:33:48.189638"
+    }
+  ],
+  "wishlist_items": [],
+  "order_items": [
+    {
+      "id": 1,
+      "order_id": 1,
+      "product_id": 7,
+      "product_name": "Midnight Velvet Embroidered Semi-Stitched Lehenga",
+      "product_sku": "VE-LEH-VEL-007",
+      "product_image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80",
+      "unit_price": 5499,
+      "quantity": 1,
+      "total_price": 5499,
+      "created_at": "2026-10-01 18:24:44.148463"
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "order_id": 1,
+      "payment_method": "UPI",
+      "amount": 5499,
+      "status": "PAID",
+      "transaction_reference": "MOCK-VE-FB4599A5ED94",
+      "payment_gateway": "MOCK_SIMULATOR",
+      "payment_details": "{\"method\": \"UPI\", \"currency\": \"INR\", \"mock_mode\": true, \"timestamp\": \"2026-10-01T18:24:44.148463\"}",
+      "created_at": "2026-10-01 18:24:44.148463",
+      "updated_at": "2026-10-01 18:24:44.148463"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "user_id": 2,
+      "order_id": null,
+      "rating": 5,
+      "title": "Breathtaking quality and genuine zari work!",
+      "comment": "Received the saree within 3 days. The fabric is 100% authentic mulberry silk and the zari has a gorgeous subtle glow. Highly recommended for special occasions.",
+      "is_verified_purchase": 1,
+      "status": "APPROVED",
+      "created_at": "2026-10-01 17:59:23.915101",
+      "updated_at": "2026-10-01 17:59:23.915103"
+    }
+  ],
+  "alembic_version": []
+}

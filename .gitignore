@@ -1,0 +1,36 @@
+# UNLIMITED choice - Full-Stack E-Commerce Platform
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+*.sqlite3
+*.db
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+.cache/
+
+# Backups & Temp
+_backup*/
+*.backup
+*.bak
+
+# System & OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

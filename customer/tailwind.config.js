@@ -1,0 +1,85 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        cream: {
+          50: '#FAF7F2',
+          100: '#F8F4EC',
+          200: '#F5EFE6',
+          300: '#EBDDC9',
+          400: '#D9CAAF',
+        },
+        forest: {
+          50: '#EFF6F2',
+          100: '#D8E8E0',
+          200: '#B0D1C1',
+          600: '#235342',
+          700: '#1A4335',
+          800: '#16382C',
+          900: '#0F2C22',
+          950: '#0B1E17',
+        },
+        gold: {
+          100: '#FDF9F2',
+          200: '#F7EEDC',
+          300: '#E6CCA0',
+          400: '#D2B47A',
+          500: '#C5A880',
+          600: '#BFA36D',
+          700: '#9D7E3E',
+          800: '#7E632C',
+        },
+        charcoal: {
+          50: '#F8F9FA',
+          100: '#E9ECEF',
+          500: '#6C757D',
+          700: '#495057',
+          800: '#2D3B35',
+          900: '#1A2621',
+          950: '#111A16',
+        },
+        luxury: {
+          bg: '#F7F8F6',
+          card: '#FFFFFF',
+          border: '#E7EBE7',
+          'border-subtle': '#F0F3F0',
+          text: '#252A27',
+          muted: '#727A74',
+          subtle: '#9DA5A0',
+          primary: '#173D30',
+          'primary-hover': '#112F25',
+          secondary: '#237653',
+          'secondary-light': '#EBF5F0',
+          gold: '#C5A16E',
+          'gold-light': '#FAF6F0',
+          'gold-dark': '#9E7F50',
+          danger: '#DC2626',
+          'danger-light': '#FEF2F2',
+          warning: '#D97706',
+          'warning-light': '#FFFBEB',
+          info: '#2563EB',
+          'info-light': '#EFF6FF',
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['Playfair Display', 'Cormorant Garamond', 'Georgia', 'serif'],
+      },
+      boxShadow: {
+        'soft': '0 4px 20px -2px rgba(22, 56, 44, 0.05)',
+        'card': '0 10px 25px -3px rgba(22, 56, 44, 0.08), 0 0 0 1px rgba(197, 168, 128, 0.25)',
+        'gold': '0 8px 25px -3px rgba(197, 168, 128, 0.35)',
+        'luxury': '0 1px 3px 0 rgba(23, 61, 48, 0.05), 0 1px 2px -1px rgba(23, 61, 48, 0.03)',
+        'luxury-md': '0 4px 12px -2px rgba(23, 61, 48, 0.06), 0 2px 6px -2px rgba(23, 61, 48, 0.04)',
+        'luxury-lg': '0 12px 24px -4px rgba(23, 61, 48, 0.08), 0 4px 8px -2px rgba(23, 61, 48, 0.03)',
+        'luxury-gold': '0 4px 20px -2px rgba(197, 161, 110, 0.25)',
+      }
+    },
+  },
+  plugins: [],
+}
