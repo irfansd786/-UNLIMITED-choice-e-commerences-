@@ -64,8 +64,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount Static Storage Directories (/media for storage, /images for customer images)
+# Mount Static Storage Directories (/storage and /media for storage, /images for customer images)
 if os.path.exists(settings.STORAGE_DIR):
+    app.mount("/storage", StaticFiles(directory=settings.STORAGE_DIR), name="storage")
     app.mount("/media", StaticFiles(directory=settings.STORAGE_DIR), name="media")
 
 customer_images_dir = os.path.join(ROOT_DIR, "customer", "public", "images")

@@ -7,7 +7,15 @@ from pydantic_settings import BaseSettings
 BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) # .../backend
 ROOT_DIR = os.path.dirname(BACKEND_DIR) # .../e-commerces
 CANONICAL_DB_PATH = os.path.join(BACKEND_DIR, "database", "varshi.db")
-STORAGE_DIR_PATH = os.path.join(BACKEND_DIR, "storage")
+# Storage directory located in customer folder for easy Vercel CDN deployment
+CUSTOMER_STORAGE_PATH = os.path.join(ROOT_DIR, "customer", "public", "storage")
+if os.path.exists(CUSTOMER_STORAGE_PATH):
+    STORAGE_DIR_PATH = CUSTOMER_STORAGE_PATH
+elif os.path.exists(os.path.join(ROOT_DIR, "customer", "storage")):
+    STORAGE_DIR_PATH = os.path.join(ROOT_DIR, "customer", "storage")
+else:
+    STORAGE_DIR_PATH = os.path.join(BACKEND_DIR, "storage")
+
 os.makedirs(os.path.dirname(CANONICAL_DB_PATH), exist_ok=True)
 os.makedirs(STORAGE_DIR_PATH, exist_ok=True)
 
@@ -36,7 +44,7 @@ class Settings(BaseSettings):
         "http://localhost:5174",
         "http://127.0.0.1:5173",
         "http://127.0.0.1:5174",
-        "https://unlimited-choice-customer.vercel.app",
+        "https://unlimited-choice-customer.vercel.app",'https://unlimited-choice-customer-git-main-irfansd786s-projects.vercel.app'
         "http://unlimited-choice-customer.vercel.app",
         "https://varshienterprises.com",
         "https://admin.varshienterprises.com",

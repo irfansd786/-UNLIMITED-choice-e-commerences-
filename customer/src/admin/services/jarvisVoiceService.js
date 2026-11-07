@@ -335,11 +335,29 @@ export function playJarvisChime(type = 'wake') {
   } catch (_) {}
 }
 
+function getStoreBaseUrl() {
+  if (typeof window !== 'undefined' && window.location.origin) {
+    return window.location.origin;
+  }
+  return import.meta.env.VITE_STORE_URL || 'http://localhost:5173';
+}
+
+function getApiBaseUrl() {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+  if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+    return 'https://unlimited-choice-backend.onrender.com/api';
+  }
+  return 'http://localhost:8000/api';
+}
+
 // Check customer website & backend health
 export async function checkCustomerWebHealth() {
   const startTime = Date.now();
-  const customerUrl = 'http://localhost:5173';
-  const apiUrl = 'http://localhost:8000/api/health';
+  const customerUrl = getStoreBaseUrl();
+  const apiBase = getApiBaseUrl().replace(/\/$/, '');
+  const apiUrl = `${apiBase}/health`;
 
   const result = {
     customerOnline: false,
@@ -357,7 +375,7 @@ export async function checkCustomerWebHealth() {
     }
 
     try {
-      const prodRes = await fetch('http://localhost:8000/api/products?limit=1', { cache: 'no-cache' });
+      const prodRes = await fetch(`${apiBase}/products?limit=1`, { cache: 'no-cache' });
       if (prodRes.ok) {
         const prodData = await prodRes.json();
         result.productCount = prodData.total || (Array.isArray(prodData) ? prodData.length : 39);
@@ -373,8 +391,8 @@ export async function checkCustomerWebHealth() {
 
     result.latencyMs = Math.max(12, Date.now() - startTime);
     result.summary = result.customerOnline 
-      ? `Customer web page is active and online at localhost 5173. Latency is ${result.latencyMs}ms with ${result.productCount} catalog products available, Chief.`
-      : `Customer web alert: localhost 5173 appears unreachable. Backend is ${result.backendOnline ? 'online' : 'offline'}.`;
+      ? `Storefront & API nominal. Latency is ${result.latencyMs}ms with ${result.productCount} catalog products available, Chief.`
+      : `Storefront check: verification pending. Backend is ${result.backendOnline ? 'online' : 'offline'}.`;
 
     return result;
   } catch (err) {
@@ -446,48 +464,49 @@ export const STOP_ONLY_REGEX = /\b(stop|quiet|shut up|hush|silence|pause|enough|
 // Resolve customer web category URL from spoken phrase
 export function resolveCustomerWebCategory(input) {
   const text = (input || '').toLowerCase();
+  const base = getStoreBaseUrl();
   
   // Shirts & T-Shirts (including phonetic misrecognitions: shuts, shut, shits, shiet, shert, shurt, t-shirt)
   if (text.includes('shirt') || text.includes('shuts') || text.includes('shut') || text.includes('shiet') || text.includes('shits') || text.includes('shit') || text.includes('shert') || text.includes('shurt') || text.includes('tshirt') || text.includes('t-shirt') || text.includes('tee')) {
-    return { url: 'http://localhost:5173/category/t-shirts', name: 'Shirts & T-Shirts' };
+    return { url: `${base}/category/t-shirts`, name: 'Shirts & T-Shirts' };
   }
   // Shorts
   if (text.includes('short') || text.includes('shots') || text.includes('shot')) {
-    return { url: 'http://localhost:5173/category/shorts', name: 'Shorts' };
+    return { url: `${base}/category/shorts`, name: 'Shorts' };
   }
   // Shoes & Footwear
   if (text.includes('shoe') || text.includes('sneaker') || text.includes('kicks') || text.includes('footwear') || text.includes('shoo')) {
-    return { url: 'http://localhost:5173/shoes', name: 'Shoes & Sneakers' };
+    return { url: `${base}/shoes`, name: 'Shoes & Sneakers' };
   }
   // Hoodies & Sweatshirts
   if (text.includes('hoodie') || text.includes('sweatshirt') || text.includes('hoody') || text.includes('pullover')) {
-    return { url: 'http://localhost:5173/category/hoodies', name: 'Hoodies' };
+    return { url: `${base}/category/hoodies`, name: 'Hoodies' };
   }
   // Jackets & Outerwear
   if (text.includes('jacket') || text.includes('bomber') || text.includes('outerwear') || text.includes('blazer') || text.includes('coat')) {
-    return { url: 'http://localhost:5173/category/jackets', name: 'Jackets' };
+    return { url: `${base}/category/jackets`, name: 'Jackets' };
   }
   // Bottomwear, Pants, Jeans, Joggers
   if (text.includes('bottom') || text.includes('pant') || text.includes('jogger') || text.includes('denim') || text.includes('jean') || text.includes('trouser')) {
-    return { url: 'http://localhost:5173/category/bottomwear', name: 'Bottomwear & Pants' };
+    return { url: `${base}/category/bottomwear`, name: 'Bottomwear & Pants' };
   }
   // Accessories
   if (text.includes('accessor') || text.includes('belt') || text.includes('cap') || text.includes('wallet') || text.includes('sock')) {
-    return { url: 'http://localhost:5173/category/accessories', name: 'Accessories' };
+    return { url: `${base}/category/accessories`, name: 'Accessories' };
   }
   // Interactive Outfit Studio
   if (text.includes('outfit') || text.includes('studio') || text.includes('360')) {
-    return { url: 'http://localhost:5173/outfit-studio', name: 'Outfit Studio' };
+    return { url: `${base}/outfit-studio`, name: 'Outfit Studio' };
   }
   // Cart & Shopping Bag
   if (text.includes('cart') || text.includes('bag') || text.includes('basket')) {
-    return { url: 'http://localhost:5173/cart', name: 'Cart' };
+    return { url: `${base}/cart`, name: 'Cart' };
   }
   // All Catalog Products
   if (text.includes('product') || text.includes('catalog') || text.includes('collection') || text.includes('item')) {
-    return { url: 'http://localhost:5173/products', name: 'All Products' };
+    return { url: `${base}/products`, name: 'All Products' };
   }
-  return { url: 'http://localhost:5173', name: 'Customer Store Home' };
+  return { url: base, name: 'Customer Store Home' };
 }
 
 // Parse Spoken Command with Intent Distinction

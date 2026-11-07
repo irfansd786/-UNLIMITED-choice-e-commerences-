@@ -40,7 +40,7 @@ export const useJarvisStore = create((set, get) => ({
 
   // Live Customer Web In-App Viewer State (Voice-driven)
   showCustomerWebViewer: false,
-  customerWebViewerUrl: 'http://localhost:5173',
+  customerWebViewerUrl: typeof window !== 'undefined' ? window.location.origin : '/',
   customerWebViewerTitle: 'Customer Store Home',
 
   setListening: (status) => set({ isListening: status }),
@@ -111,7 +111,7 @@ export const useJarvisStore = create((set, get) => ({
 
   openCustomerWebViewer: (url, title = 'Live Customer Store') => set({
     showCustomerWebViewer: true,
-    customerWebViewerUrl: url || 'http://localhost:5173',
+    customerWebViewerUrl: url || (typeof window !== 'undefined' ? window.location.origin : '/'),
     customerWebViewerTitle: title
   }),
 

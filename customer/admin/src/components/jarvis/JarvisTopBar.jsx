@@ -194,7 +194,7 @@ export default function JarvisTopBar({ adminName = 'Chief' }) {
                 <RefreshCw className={`w-3 h-3 ${checkingWeb ? 'animate-spin text-[#173D30]' : ''}`} />
               </button>
               <a
-                href="http://localhost:5173"
+                href={typeof window !== 'undefined' ? window.location.origin : '/'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-1 text-[#727A74] hover:text-[#173D30] rounded hover:bg-white transition-colors"

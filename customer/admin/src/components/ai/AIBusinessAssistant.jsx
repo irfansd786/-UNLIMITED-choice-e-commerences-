@@ -567,7 +567,7 @@ export default function AIBusinessAssistant() {
                           </span>
                           {actionSuccess.product_id && (
                             <a
-                              href={`http://localhost:5173/products/${actionSuccess.product_id}`}
+                              href={`/products/${actionSuccess.product_id}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-[11px] underline flex items-center gap-1 text-[#173D30] font-semibold"

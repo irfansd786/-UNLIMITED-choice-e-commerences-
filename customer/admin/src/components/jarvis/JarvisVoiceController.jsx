@@ -460,7 +460,7 @@ export default function JarvisVoiceController({ adminName = 'Chief' }) {
         } catch (_) {}
       } else if (parsed.type === 'OPEN_CUSTOMER_SITE') {
         playJarvisChime('action');
-        const targetUrl = parsed.target || 'http://localhost:5173';
+        const targetUrl = parsed.target || (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:5173');
         const targetLabel = 'Live Customer Store';
         setLastResponse(parsed.response);
         speakResponse(parsed.response);
